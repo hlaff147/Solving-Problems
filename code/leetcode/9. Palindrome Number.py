@@ -5,11 +5,7 @@ class Solution:
         if x < 0:
             return False
         while x != 0:
-            digit = x %10
+            digit = x % 10
             reversed_number = (reversed_number * 10) + digit
-            x = x//10
-        
-        if reversed_number == original_number:
-            return True
-        else:
-            return False
+            x = x // 10
+        return original_number == reversed_number
