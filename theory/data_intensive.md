@@ -32,7 +32,6 @@ Um banco de dados exclusivo para OLAP. Como os sistemas OLAP realizam consultas 
 
 O processo de extrair dados de bancos OLTP, transformá-los e carregá-los no Data Warehouse (o famoso processo de **ETL - Extract, Transform, Load**) é feito utilizando ferramentas e frameworks especializados em conectores de dados e pipelines. 
 
-> **[Adicionado pela IA]**
 > **Exemplos de frameworks populares de ETL/Orquestração:**
 > * **Apache Airflow:** O orquestrador mais utilizado para gerenciar e agendar pipelines de ETL complexos definidos como código (Python).
 > * **Apache Spark:** Framework de processamento distribuído ideal para grandes volumes de dados (Batch e Streaming).
@@ -44,7 +43,6 @@ O processo de extrair dados de bancos OLTP, transformá-los e carregá-los no Da
 
 ### Data Lake vs. Data Warehouse (Esclarecimento de Dúvida)
 
-> **[Esclarecimento de Dúvida / Expandido pela IA]**
 > **Qual é mais refinado?**
 > * O **Data Warehouse** é o repositório **mais refinado**. Nele, os dados já passaram por limpeza, filtragem, modelagem e normalização (esquema na escrita ou *schema-on-write*), prontos para analistas e relatórios corporativos.
 > * O **Data Lake** armazena **dados brutos** (raw). Ele funciona como um repositório central mais econômico (geralmente usando Object Storages como AWS S3 ou Azure Blob Storage), onde os dados são despejados no seu formato original sem estrutura rígida predefinida (esquema na leitura ou *schema-on-read*).
@@ -67,20 +65,17 @@ Alguns sistemas de banco de dados oferecem um modelo híbrido capaz de servir ta
 
 ### Sistemas de Registro (System of Record)
 
-> **[Expandido pela IA]**
 > Também conhecido como **Fonte da Verdade (Source of Truth)**. Este sistema guarda a versão primária e autoritativa do dado. 
 > * Quando novas informações são criadas (por exemplo, um novo usuário se cadastra), elas são gravadas diretamente no Sistema de Registro primeiro.
 > * Cada dado relevante possui apenas uma origem oficial neste sistema. Se houver qualquer divergência entre ele e outros sistemas, o valor presente no Sistema de Registro é o correto.
 
 ### Sistemas de Dados Derivados (Derived Data Systems)
 
-> **[Expandido pela IA]**
 > Sistemas que não são a fonte original da informação, mas sim o resultado de processar, transformar ou indexar dados existentes vindos de outro sistema de registro.
 > * *Exemplos práticos:* Índices de busca (como o Elasticsearch), caches (como o Redis) e views materializadas.
 > * Se um sistema de dados derivados for perdido ou corrompido, ele pode ser totalmente reconstruído a partir da fonte da verdade (o Sistema de Registro).
 
 ### Diferença na Prática
 
-> **[Expandido pela IA]**
 > A diferença entre um sistema de registro e um sistema de dados derivados **não depende da ferramenta ou do banco de dados escolhido**, mas sim de **como você projeta o fluxo de dados na sua arquitetura**.
 > * *Por exemplo:* Você pode usar o PostgreSQL como Sistema de Registro (onde os novos pedidos de uma loja são persistidos) e, simultaneamente, usar outra instância de PostgreSQL (ou o mesmo banco, através de réplicas de leitura e views materializadas) para atuar como um sistema de dados derivados para relatórios.

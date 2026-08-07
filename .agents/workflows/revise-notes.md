@@ -14,7 +14,7 @@ Revisa e aprimora as anotações do livro Designing Data-Intensive Applications 
    - **Esclarecer dúvidas**: Onde estiver marcado explicitamente uma dúvida sobre algum conceito, explique o conceito de forma clara para eliminar a dúvida.
    - **Revisar o português (pt-BR)**: Corrija erros gramaticais, ortográficos e de concordância, mantendo o tom e vocabulário técnico.
    - **Reorganizar a estrutura do Markdown**: Ajuste a hierarquia de títulos e subtítulos (#, ##, ###) para refletir a organização lógica dos capítulos/temas do livro, dividindo em seções claras, com uso consistente de listas, negrito e blocos de código quando aplicável.
-   - **Marcar as alterações**: Destaque de forma sutil (por exemplo, com um comentário ou marcação) quais trechos foram adicionados/expandidos para revisão posterior do usuário.
+
 
 3. **Restrições**:
    - Não altere o conteúdo técnico correto que já está bem anotado.
